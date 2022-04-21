@@ -9,7 +9,7 @@ import pickle
 app=FastAPI()
 pickle_in=open("svc.pkl","rb")
 svc1=pickle.load(pickle_in)
-@app.post('/')
+@app.get('/')
 def Diagnose(Symptoms:str):
   user =Symptoms
   arr =list(map(int,user))
